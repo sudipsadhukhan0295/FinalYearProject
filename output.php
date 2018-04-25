@@ -11,7 +11,8 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        include_once './checkStroke.php';
+        include_once './header.php';
+        include_once './CheckStroke.php';
         ?>
     </body>
 </html>

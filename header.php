@@ -28,6 +28,9 @@ and open the template in the editor.
                         <li>
                             <a href="output.php">Stroke Predictor Output</a>
                         </li>
+                        <li>
+                            <a>Graph chart</a>
+                        </li>
                     </ul>
                 </div>
             </nav>

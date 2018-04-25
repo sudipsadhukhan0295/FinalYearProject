@@ -14,6 +14,7 @@ and open the template in the editor.
         include_once './connect.php';
         include_once './header.php';
         if (isset($_POST['age'])) {
+            $name=$_POST['name'];
             $age = $_POST['age'];
             $sex = $_POST['sex'];
             $BP = $_POST['BP'];
@@ -28,40 +29,45 @@ and open the template in the editor.
         ?>
         <div class="container">
             <div class="form-group" >
-                <form action="inputForm.php" method="post" class="form-inline my-2 my-lg-0"> 
-                    <label>Age
-                        <input class="form-control" type="text" name="age" id="age">
-                    </label>
+                <form action="inputForm.php" method="post" >
+                    <label>Patient's Name:</label><br/>
+                    <input type="text"  class="form-control" name="name" id="name" placeholder="Please Enter Patient name..." required><br>
+                    <label>Age:</label><br/>
+                    <input type="text"  class="form-control" name="age" id="age" placeholder="Please Enter Age..." required><br>
+                    <label>Gender:</label><br>
+                    <label><input type="radio" name="sex" value="1" id="male">
+                        Male</label>
+                    <label><input type="radio" name="sex" value="0" id="female">
+                    Female</label>
                     <br>
-                    <label>Male
-                        <input type="radio" name="sex" value="1" id="male">
-                    </label>
-                    <label>Female
-                        <input type="radio" name="sex" value="0" id="female">
-                    </label>
+                    <label>BP:</label><br>
+                    <input class="form-control" type="text" name="BP" id="BP" placeholder="Please Enter BP..." required >
                     <br>
-                    <label>BP
-                        <input class="form-control" type="text" name="BP" id="BP">
-                    </label><br>
-                    <label>Smokes
-                        <input class="form-control" type="text" name="smokes" id="smokes">
-                    </label><br>
-                    <label>Cholesterol
-                        <input class="form-control" type="text" name="cholestrol" id="cholestrol">
-                    </label><br>
-                    <label>Weight
-                        <input class="form-control" type="text" name="weight" id="weight">
-                    </label><br>
-                    <label>Height
-                        <input class="form-control" type="text" name="height" id="height">
-                    </label><br>
-                    <label>Fasting
-                        <input class="form-control" type="text" name="fasting" id="Fasting">
-                    </label><br>
-                    <label>Family History
-                        <input class="form-control" type="text" name="fh" id="fh">
-                    </label><br>
-                    <input type="submit"  value="Save" name='Save'> 
+                    <label>Smokes:</label><br>
+                    <input type="radio" name="smokes" value="1" >
+                    Yes
+                    <input type="radio" name="smokes" value="0">
+                    No
+                    <br>
+                    <label>Cholesterol:</label><br>
+                    <input class="form-control" type="text" name="cholestrol" id="cholestrol" placeholder="Please Enter Cholesterol..." required>
+                    <br>
+                    <label>Weight:</label><br>
+                    <input class="form-control" type="text" name="weight" id="weight" placeholder="Please Enter Weight..." required>
+                    <br>
+                    <label>Height:</label><br>
+                    <input class="form-control" type="text" name="height" id="height" placeholder="Please Enter Height..." required>
+                    <br>
+                    <label>Fasting:</label><br>
+                    <input class="form-control" type="text" name="fasting" id="Fasting" placeholder="Please Enter Fasting..." required>
+                    <br>
+                    <label>Family History:</label><br>
+                    <input type="radio" name="fh" value="1" id="male">
+                    Yes
+                    <input type="radio" name="fh" value="0" id="female">
+                    No
+                    <hr>
+                    <input type="submit" class="btn btn-primary" value="Save" name='Save'> 
                 </form>
             </div>
         </div>
