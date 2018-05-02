@@ -14,7 +14,7 @@ and open the template in the editor.
         include_once './connect.php';
         include_once './header.php';
         if (isset($_POST['age'])) {
-            $name=$_POST['name'];
+            $name=$_POST['name1'];
             $age = $_POST['age'];
             $sex = $_POST['sex'];
             $BP = $_POST['BP'];
@@ -25,13 +25,16 @@ and open the template in the editor.
             $fasting = $_POST['fasting'];
             $family_history = $_POST['fh'];
             $result = mysqli_query($link, "insert into patient(age,sex,BP,smokes,cholestrol,weight,height,fasting,family_history) values($age,$sex,$BP,$smokes,$cholestrol,$weight,$height,$fasting,$family_history)");
+        $result = mysqli_query($link, "insert into patient(name) values('$name')");
+            
         }
+        
         ?>
         <div class="container">
             <div class="form-group" >
                 <form action="inputForm.php" method="post" >
                     <label>Patient's Name:</label><br/>
-                    <input type="text"  class="form-control" name="name" id="name" placeholder="Please Enter Patient name..." required><br>
+                    <input type="text"  class="form-control" name="name1" id="name1" placeholder="Please Enter Patient name..." required><br>
                     <label>Age:</label><br/>
                     <input type="text"  class="form-control" name="age" id="age" placeholder="Please Enter Age..." required><br>
                     <label>Gender:</label><br>
