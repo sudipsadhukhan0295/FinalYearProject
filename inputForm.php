@@ -24,7 +24,7 @@ and open the template in the editor.
             $height = $_POST['height'];
             $fasting = $_POST['fasting'];
             $family_history = $_POST['fh'];
-            $result = mysqli_query($link, "insert into patient (age,sex,BP,smokes,cholestrol,weight,fasting,family_history) values('$age','$sex','$BP','$smokes','$cholestrol','$weight','$fasting','$family_history')");
+            $result = mysqli_query($link, "insert into patient(age,sex,BP,smokes,cholestrol,weight,height,fasting,family_history) values($age,$sex,$BP,$smokes,$cholestrol,$weight,$height,$fasting,$family_history)");
         }
         ?>
         <div class="container">
